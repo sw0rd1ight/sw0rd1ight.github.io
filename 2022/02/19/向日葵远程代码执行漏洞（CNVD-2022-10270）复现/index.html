@@ -14,13 +14,13 @@
   
   <meta name="theme-color" content="#2f4154">
   <meta name="description" content="">
-  <meta name="author" content="小剑">
-  <meta name="keywords" content="">
+  <meta name="author" content="sw0rd1ight">
+  <meta name="keywords" content="代码审计">
   <meta name="description" content="该漏洞本质就是当主机启动向日葵后，会开启一个http服务，该服务中存在一些未授权访问获取CID的接口，携带该CID去访问&#x2F;check接口可以执行系统命令  0x01复现环境信息向日葵版本：10.5.0.29613、11.0.0.33162 安装程序：SunloginClient_10.5.0.29613_X64.exe、SunloginClient_11.0.0.33162.exe 0x02">
 <meta property="og:type" content="article">
 <meta property="og:title" content="向日葵远程代码执行漏洞（CNVD-2022-10270）复现">
 <meta property="og:url" content="https://swordlight6.github.io/2022/02/19/%E5%90%91%E6%97%A5%E8%91%B5%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E%EF%BC%88CNVD-2022-10270%EF%BC%89%E5%A4%8D%E7%8E%B0/index.html">
-<meta property="og:site_name" content="SwordLight&#39;s Blog">
+<meta property="og:site_name" content="sw0rd1ight&#39;s Blog">
 <meta property="og:description" content="该漏洞本质就是当主机启动向日葵后，会开启一个http服务，该服务中存在一些未授权访问获取CID的接口，携带该CID去访问&#x2F;check接口可以执行系统命令  0x01复现环境信息向日葵版本：10.5.0.29613、11.0.0.33162 安装程序：SunloginClient_10.5.0.29613_X64.exe、SunloginClient_11.0.0.33162.exe 0x02">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://cdn.nlark.com/yuque/0/2022/png/22550391/1645030155667-501d2603-bb6a-4318-9ad0-6b0fdbff2d95.png#clientId=u58347649-c010-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=230&id=F3cc5&margin=%5Bobject%20Object%5D&name=image.png&originHeight=460&originWidth=372&originalType=binary&ratio=1&rotation=0&showTitle=false&size=14081&status=done&style=none&taskId=ufc036b00-91bd-4bf5-8b08-ecb68ac99aa&title=&width=186">
@@ -38,14 +38,14 @@
 <meta property="og:image" content="https://cdn.nlark.com/yuque/0/2022/png/22550391/1645280202805-941680fe-1746-4a63-92e4-56c9982ab5c0.png#clientId=u20eed5a4-eb19-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=477&id=u6d4825a9&margin=%5Bobject%20Object%5D&name=image.png&originHeight=953&originWidth=2489&originalType=binary&ratio=1&rotation=0&showTitle=false&size=431718&status=done&style=none&taskId=uea7fd1f1-9fd6-4ede-bfbc-e9782d74682&title=&width=1244.5">
 <meta property="article:published_time" content="2022-02-19T14:19:58.000Z">
 <meta property="article:modified_time" content="2022-02-19T14:53:26.740Z">
-<meta property="article:author" content="小剑">
+<meta property="article:author" content="sw0rd1ight">
 <meta property="article:tag" content="向日葵">
 <meta property="article:tag" content="远程命令执行">
 <meta property="article:tag" content="CNVD-2022-10270">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://cdn.nlark.com/yuque/0/2022/png/22550391/1645030155667-501d2603-bb6a-4318-9ad0-6b0fdbff2d95.png#clientId=u58347649-c010-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=230&id=F3cc5&margin=%5Bobject%20Object%5D&name=image.png&originHeight=460&originWidth=372&originalType=binary&ratio=1&rotation=0&showTitle=false&size=14081&status=done&style=none&taskId=ufc036b00-91bd-4bf5-8b08-ecb68ac99aa&title=&width=186">
   
-  <title>向日葵远程代码执行漏洞（CNVD-2022-10270）复现 - SwordLight&#39;s Blog</title>
+  <title>向日葵远程代码执行漏洞（CNVD-2022-10270）复现 - sw0rd1ight&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
 
