@@ -19,7 +19,7 @@
   <meta name="description" content="该漏洞本质就是当主机启动向日葵后，会开启一个http服务，该服务中存在一些未授权访问获取CID的接口，携带该CID去访问&#x2F;check接口可以执行系统命令  0x01复现环境信息向日葵版本：10.5.0.29613、11.0.0.33162 安装程序：SunloginClient_10.5.0.29613_X64.exe、SunloginClient_11.0.0.33162.exe 0x02">
 <meta property="og:type" content="article">
 <meta property="og:title" content="向日葵远程代码执行漏洞（CNVD-2022-10270）复现">
-<meta property="og:url" content="https://swordlight6.github.io/2022/02/19/%E5%90%91%E6%97%A5%E8%91%B5%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E%EF%BC%88CNVD-2022-10270%EF%BC%89%E5%A4%8D%E7%8E%B0/index.html">
+<meta property="og:url" content="https://sw0rd1ight.github.io/2022/02/19/%E5%90%91%E6%97%A5%E8%91%B5%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E%EF%BC%88CNVD-2022-10270%EF%BC%89%E5%A4%8D%E7%8E%B0/index.html">
 <meta property="og:site_name" content="sw0rd1ight&#39;s Blog">
 <meta property="og:description" content="该漏洞本质就是当主机启动向日葵后，会开启一个http服务，该服务中存在一些未授权访问获取CID的接口，携带该CID去访问&#x2F;check接口可以执行系统命令  0x01复现环境信息向日葵版本：10.5.0.29613、11.0.0.33162 安装程序：SunloginClient_10.5.0.29613_X64.exe、SunloginClient_11.0.0.33162.exe 0x02">
 <meta property="og:locale" content="zh_CN">
@@ -82,7 +82,7 @@
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"swordlight6.github.io","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname"}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"sw0rd1ight.github.io","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname"}},"search_path":"/local-search.xml"};
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
@@ -94,7 +94,7 @@
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
-      <strong>SwordLight&#39;s Blog</strong>
+      <strong>sw0rd1ight&#39;s Blog</strong>
     </a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
@@ -317,6 +317,12 @@
                 <div class="post-prevnext">
                   <article class="post-prev col-6">
                     
+                    
+                      <a href="/2023/07/30/%E8%AF%91%E6%96%87-%E5%9C%A8%E4%B8%80%E7%99%BE%E4%B8%87%E4%B8%AA%E7%BD%91%E7%AB%99%E4%B8%AD%E5%8F%91%E7%8E%B0-XSS-cPanel-CVE-2023-29489/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">译文:在一百万个网站中发现 XSS (cPanel CVE-2023-29489)</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
                     
                   </article>
                   <article class="post-next col-6">
